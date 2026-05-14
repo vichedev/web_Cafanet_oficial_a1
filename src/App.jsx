@@ -6,13 +6,15 @@ import Documentos from './components/Documentos'
 import Contactos from './components/Contactos'
 import Footer from './components/Footer'
 import PlanesCafanet from './components/PlanesCafanet'
-import PlanesTvCafa from './components/PlanesTvCafa'
-import HeroTvCafa from './components/HeroTvCafa'
-import ControlParental from './components/ControlParental' // ✅ NUEVA IMPORTACIÓN
+import ControlParental from './components/ControlParental'
+import Tips from './components/Tips'
+import PaginaDocumento from './components/PaginaDocumento'
+import ScrollToTop from './utils/ScrollToTop'
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
+      <ScrollToTop />
       <Nav />
       <main className="flex-grow">
         <Routes>
@@ -21,9 +23,44 @@ function App() {
           <Route path="/documentos" element={<Documentos />} />
           <Route path="/contactos" element={<Contactos />} />
           <Route path="/planes-cafanet" element={<PlanesCafanet />} />
-          <Route path="/tv-cafa" element={<HeroTvCafa />} />
-          <Route path="/planes-tvcafa" element={<PlanesTvCafa />} />
-          <Route path="/control-parental" element={<ControlParental />} /> {/* ✅ NUEVA RUTA */}
+          <Route path="/tips" element={<Tips />} />
+          <Route path="/control-parental" element={<ControlParental />} />
+          <Route
+            path="/parametros-calidad"
+            element={
+              <PaginaDocumento
+                eyebrow="Información Regulatoria"
+                title="Parámetros de Calidad"
+                description="Documento oficial que detalla los parámetros de calidad del servicio de internet ofrecido por Cafanet, conforme a la normativa de ARCOTEL."
+                highlights={[
+                  'Velocidad de bajada y subida garantizada',
+                  'Disponibilidad y tiempo de respuesta del servicio',
+                  'Latencia y porcentaje de pérdida de paquetes',
+                  'Compromisos de calidad ante el regulador',
+                  'Procesos de atención y reclamos',
+                  'Indicadores técnicos del servicio'
+                ]}
+              />
+            }
+          />
+          <Route
+            path="/tarifario-promociones"
+            element={
+              <PaginaDocumento
+                eyebrow="Tarifas y Ofertas"
+                title="Tarifario y Promociones"
+                description="Consulta los precios oficiales de cada uno de los planes de internet Cafanet y las promociones vigentes para nuevos y actuales clientes."
+                highlights={[
+                  'Precio mensual por plan',
+                  'Velocidad incluida en cada paquete',
+                  'Beneficios de planes sociales y senior',
+                  'Promociones vigentes y temporales',
+                  'Costo de instalación según oficina',
+                  'Condiciones y plazos de contratación'
+                ]}
+              />
+            }
+          />
         </Routes>
       </main>
       <Footer />

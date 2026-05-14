@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Archivos generados por el instalador (no compartir el puerto local)
+.env
+.env.local
+!.env.example
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

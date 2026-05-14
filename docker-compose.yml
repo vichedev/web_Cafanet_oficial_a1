@@ -1,3 +1,8 @@
+# =============================================================
+#  Cafanet ISP Web — docker compose
+#  El puerto se controla via .env (HOST_PORT). Si no está, usa 8384.
+#  Genera el .env con:  ./install.sh   (o .\install.ps1 en Windows)
+# =============================================================
 services:
   web:
     build:
@@ -21,7 +26,11 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
+    labels:
+      com.cafanet.service: "web"
+      com.cafanet.description: "Cafanet ISP — sitio público"
 
 networks:
   cafanet-net:
     driver: bridge
+    name: cafanet-net
