@@ -13,7 +13,6 @@ const PaginaDocumento = ({
 
   return (
     <section className="relative bg-gradient-to-b from-blue-50 via-white to-blue-50 min-h-screen py-16 md:py-24 overflow-hidden">
-      {/* Blobs decorativos */}
       <div className="absolute top-0 right-0 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-purple-200/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
 

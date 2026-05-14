@@ -1,104 +1,88 @@
-// data/documents.js
+// Documentos oficiales de Cafanet
+// Los PDFs viven en /public/Documents/ con el nombre exacto indicado en pdfUrl.
 
 const documentosData = [
   {
     id: 1,
-    imageUrl: "/Documents/img_icon/icon_docu.png", // Imagen de referencia
-    title: "CONATEL VALOR AGREGADO",
-    description: "Documento de valor agregado.",
-    pdfUrl: "/Documents/071-03-CONATEL-2002 valor agregado.pdf", // URL del documento PDF
+    imageUrl: '/Documents/img_icon/icon_docu.png',
+    title: 'Contrato de Adhesión',
+    description: 'Contrato de adhesión del servicio Cafanet (César Augusto Flores Ávalos).',
+    pdfUrl: '/Documents/1-CONTRATO DE ADHESION FLORES AVALO.pdf',
+    category: 'Contrato',
+    tone: 'blue'
   },
   {
     id: 2,
-    imageUrl: "/Documents/img_icon/icon_docu.png",
-    title: "Consejos de Seguridad",
-    description: "Documento informativo.",
-    pdfUrl: "/Documents/Consejos_de_seguridad_Antel.pdf",
+    imageUrl: '/Documents/img_icon/icon_docu.png',
+    title: 'Control Parental',
+    description: 'Recomendaciones para la configuración del control parental en tu hogar.',
+    pdfUrl: '/Documents/2-CONTROL PARENTAL.pdf',
+    category: 'Operativo',
+    tone: 'green'
   },
   {
     id: 3,
-    imageUrl: "/Documents/img_icon/icon_docu.png",
-    title: "CONTROL PARENTAL",
-    description: "Documento guia de controles parentales.",
-    pdfUrl: "/Documents/control parental.pdf",
+    imageUrl: '/Documents/img_icon/icon_docu.png',
+    title: 'Plan de Contingencia',
+    description: 'Plan de contingencia del servicio de acceso a internet Cafanet.',
+    pdfUrl: '/Documents/3-PLAN DE CONTINGENCIA.pdf',
+    category: 'Operativo',
+    tone: 'green'
   },
   {
     id: 4,
-    imageUrl: "/Documents/img_icon/icon_docu.png",
-    title: "Banda Ancha y Compartición",
-    description: "Definiciones.",
-    pdfUrl: "/Documents/Definiciones Banda Ancha y Comparticion.pdf",
+    imageUrl: '/Documents/img_icon/icon_docu.png',
+    title: 'Resolución',
+    description: 'Resolución oficial del servicio de telecomunicaciones.',
+    pdfUrl: '/Documents/4-RESOLUCION.pdf',
+    category: 'Regulatorio',
+    tone: 'amber'
   },
   {
     id: 5,
-    imageUrl: "/Documents/img_icon/icon_docu.png",
-    title: "FIREWALL",
-    description: "Documento sobre Firewall.",
-    pdfUrl: "/Documents/Firewall.pdf",
+    imageUrl: '/Documents/img_icon/icon_docu.png',
+    title: 'Políticas de Seguridad',
+    description: 'Políticas de seguridad de la información implementadas por Cafanet.',
+    pdfUrl: '/Documents/5-POLITICAS DE SEGURIDAD.pdf',
+    category: 'Política',
+    tone: 'purple'
   },
   {
     id: 6,
-    imageUrl: "/Documents/img_icon/icon_docu.png",
-    title: "Ley Organica de telecomunicaciones",
-    description: "Documento de leyes.",
-    pdfUrl: "/Documents/ley_organica_de_telecomunicaciones (1).pdf",
+    imageUrl: '/Documents/img_icon/icon_docu.png',
+    title: 'Política de Datos Personales',
+    description: 'Política para el tratamiento de datos personales según la LOPDP.',
+    pdfUrl: '/Documents/6-POLITICA DE DATOS PERSONALES.pdf',
+    category: 'Política',
+    tone: 'purple'
   },
   {
     id: 7,
-    imageUrl: "/Documents/img_icon/icon_docu.png",
-    title: "Normas de Calidad",
-    description: "Norma de calidad 2009.",
-    pdfUrl: "/Documents/NormadeCalidad2009.pdf",
+    imageUrl: '/Documents/img_icon/icon_docu.png',
+    title: 'Protocolo de Prevención de Violencia',
+    description: 'Protocolo de prevención y erradicación de la violencia y acoso laboral.',
+    pdfUrl: '/Documents/7-PROTOCOLO DE PREVENCION DE VIOLENCIA.pdf',
+    category: 'Política',
+    tone: 'purple'
   },
   {
     id: 8,
-    imageUrl: "/Documents/img_icon/icon_docu.png",
-    title: "QOS SVA",
-    description: "Requisitos de servicio.",
-    pdfUrl: "/Documents/qos sva.pdf",
+    imageUrl: '/Documents/img_icon/icon_docu.png',
+    title: 'Políticas de Confidencialidad',
+    description: 'Políticas internas de confidencialidad y manejo de información.',
+    pdfUrl: '/Documents/8-POLITICAS DE CONFIDENCIALIDAD.pdf',
+    category: 'Confidencialidad',
+    tone: 'red'
   },
   {
     id: 9,
-    imageUrl: "/Documents/img_icon/icon_docu.png",
-    title: "Reglamento Abonado",
-    description: "Documento de reglamentos.",
-    pdfUrl: "/Documents/reglamento abonado.pdf",
-  },
-  {
-    id: 10,
-    imageUrl: "/Documents/img_icon/icon_docu.png",
-    title: "Reglamento genaral de Telecomunicaciones",
-    description: "Documento de reglamentos.",
-    pdfUrl: "/Documents/REGLAMENTO_GENERAL_LEY_TELECOMUNICACIONES.pdf",
-  },
-  {
-    id: 11,
-    imageUrl: "/Documents/img_icon/icon_docu.png",
-    title: "Ley Organica de telecomunicaciones",
-    description: "Reglamentos de ley.",
-    pdfUrl: "/Documents/Reglamento-Ley-Organica-de-Telecomunicaciones.pdf",
-  },
-  {
-    id: 12,
-    imageUrl: "/Documents/img_icon/icon_docu.png",
-    title: "Clientes SVA",
-    description: "Reglamento para los abonados.",
-    pdfUrl: "/Documents/reglamento-para-los-abonados-clientes-sva.pdf",
-  },
-  {
-    id: 13,
-    imageUrl: "/Documents/img_icon/icon_docu.png",
-    title: "RESOLUCIÓN CONATEL 2012",
-    description: "Documento de resolución.",
-    pdfUrl: "/Documents/tel_477_16_conatel_2012.pdf",
-  },
-  {
-    id: 14,
-    imageUrl: "/Documents/img_icon/icon_docu.png",
-    title: "TERMINOLOGIAS",
-    description: "Documento de terminologias.",
-    pdfUrl: "/Documents/terminologias.pdf",
-  },
+    imageUrl: '/Documents/img_icon/icon_docu.png',
+    title: 'Acuerdo de Confidencialidad',
+    description: 'Acuerdo de confidencialidad entre Cafanet y el encargado de seguridad.',
+    pdfUrl: '/Documents/9-ACUERDO DE CONFIDENCIALIDAD.pdf',
+    category: 'Confidencialidad',
+    tone: 'red'
+  }
 ];
 
 export default documentosData;
