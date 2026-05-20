@@ -72,7 +72,7 @@ const Contactos = () => {
           whileInView="visible"
           viewport={VIEWPORT}
           variants={stagger(0.1, 0.12)}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
           {/* WhatsApp */}
           <motion.a
@@ -127,7 +127,7 @@ const Contactos = () => {
             transition={{ duration: 0.4, ease: SOFT_EASE }}
           >
           <Link
-            to="/planes-cafanet"
+            to="/cobertura"
             className="group block bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-purple-500/20 text-center border border-transparent hover:border-purple-200"
           >
             <div className="bg-gradient-to-br from-purple-100 to-purple-200 p-3 rounded-2xl w-20 h-20 mx-auto mb-4 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
@@ -137,14 +137,92 @@ const Contactos = () => {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-gray-800 mb-1">Nuestras Oficinas</h3>
-            <p className="text-gray-600 font-medium">7 puntos en Los Ríos</p>
+            <p className="text-gray-600 font-medium">8 puntos en Los Ríos</p>
             <p className="text-purple-600 font-semibold mt-2 inline-flex items-center gap-1">
               Ver mapa de cobertura
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </p>
-            <p className="text-xs text-gray-400 mt-2 italic">Babahoyo, San Juan, Urdaneta…</p>
+            <p className="text-xs text-gray-400 mt-2 italic">Ventanas, Babahoyo, San Juan…</p>
           </Link>
           </motion.div>
+
+          {/* Correo electrónico */}
+          <motion.a
+            variants={fadeInUp}
+            whileHover={{ y: -6, scale: 1.02 }}
+            transition={{ duration: 0.4, ease: SOFT_EASE }}
+            href="mailto:info@cafanet.com"
+            className="group bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-amber-500/20 text-center border border-transparent hover:border-amber-200"
+          >
+            <div className="bg-gradient-to-br from-amber-100 to-amber-200 p-3 rounded-2xl w-20 h-20 mx-auto mb-4 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+              <svg className="w-10 h-10 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-800 mb-1">Correo Electrónico</h3>
+            <p className="text-gray-600 font-medium break-all">info@cafanet.com</p>
+            <p className="text-amber-600 font-semibold mt-2 inline-flex items-center gap-1">
+              Escríbenos un email
+              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </p>
+            <p className="text-xs text-gray-400 mt-2 italic">Respuesta en menos de 24 h</p>
+          </motion.a>
+        </motion.div>
+
+        {/* Llamada directa por oficina */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT}
+          variants={stagger(0.05, 0.08)}
+          className="mb-16 bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-6 md:p-8"
+        >
+          <motion.div variants={fadeInUp} className="flex items-center gap-4 mb-6">
+            <div className="bg-gradient-to-br from-blue-500 to-blue-700 p-3 rounded-2xl shadow-lg flex-shrink-0">
+              <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </div>
+            <div>
+              <span className="text-xs font-semibold text-blue-300 uppercase tracking-wider">Opción · Llamada directa</span>
+              <h2 className="text-2xl md:text-3xl font-bold text-white">Llama a tu oficina más cercana</h2>
+              <p className="text-gray-300 text-sm mt-1">Atención directa por línea telefónica en cada localidad.</p>
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { oficina: 'San Juan',     telefono: '0982500314' },
+              { oficina: 'Pueblo Viejo', telefono: '0989801497' },
+              { oficina: 'La Unión',     telefono: '0983165577' },
+              { oficina: 'Babahoyo',     telefono: '0959515466' },
+              { oficina: 'Baba',         telefono: '0939377791' },
+              { oficina: 'Urdaneta',     telefono: '0994893578' }
+            ].map((item, i) => (
+              <motion.a
+                key={item.oficina}
+                variants={fadeInUp}
+                whileHover={{ y: -4, scale: 1.02 }}
+                transition={{ duration: 0.3, ease: SOFT_EASE }}
+                href={`tel:+593${item.telefono.replace(/^0/, '')}`}
+                className="group flex items-center gap-4 bg-white/10 hover:bg-white/15 border border-white/10 hover:border-blue-400/40 rounded-2xl px-4 py-3.5 transition-colors duration-300"
+              >
+                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-blue-500/20 group-hover:bg-blue-500/30 flex items-center justify-center transition-colors">
+                  <svg className="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-[11px] uppercase tracking-wider text-blue-200/80 font-semibold">Oficina {String(i + 1).padStart(2, '0')}</p>
+                  <p className="font-bold text-white truncate">{item.oficina}</p>
+                  <p className="text-sm text-gray-300 font-mono tracking-wider">{item.telefono}</p>
+                </div>
+                <svg className="w-5 h-5 text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </motion.a>
+            ))}
+          </div>
         </motion.div>
 
         {/* Contenido principal */}
@@ -210,7 +288,7 @@ const Contactos = () => {
                   'Soporte técnico especializado',
                   'Respuesta rápida por WhatsApp',
                   'Soluciones personalizadas',
-                  '7 oficinas en Los Ríos'
+                  '8 oficinas en Los Ríos'
                 ].map((item, i) => (
                   <li key={i} className="flex items-start">
                     <svg className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

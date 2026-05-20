@@ -82,6 +82,15 @@ const documentosData = [
     pdfUrl: '/Documents/9-ACUERDO DE CONFIDENCIALIDAD.pdf',
     category: 'Confidencialidad',
     tone: 'red'
+  },
+  {
+    id: 10,
+    imageUrl: '/Documents/img_icon/icon_docu.png',
+    title: 'Resolución de Aprobación del Contrato de Adhesión',
+    description: 'Resolución oficial que aprueba el contrato de adhesión del servicio Cafanet.',
+    pdfUrl: '/Documents/10-Resolución de aprobación del contrato de adhesión.pdf',
+    category: 'Regulatorio',
+    tone: 'amber'
   }
 ];
 

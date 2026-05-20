@@ -9,6 +9,7 @@ import PlanesCafanet from './components/PlanesCafanet'
 import ControlParental from './components/ControlParental'
 import Tips from './components/Tips'
 import PaginaDocumento from './components/PaginaDocumento'
+import Cobertura from './components/Cobertura'
 import ScrollToTop from './utils/ScrollToTop'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/documentos" element={<Documentos />} />
           <Route path="/contactos" element={<Contactos />} />
           <Route path="/planes-cafanet" element={<PlanesCafanet />} />
+          <Route path="/cobertura" element={<Cobertura />} />
           <Route path="/tips" element={<Tips />} />
           <Route path="/control-parental" element={<ControlParental />} />
           <Route

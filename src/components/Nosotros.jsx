@@ -132,6 +132,29 @@ const Nosotros = () => {
                 </div>
               </div>
             </motion.div>
+
+            {/* Documento de historia */}
+            <motion.a
+              variants={fadeInUp}
+              whileHover={{ scale: 1.02, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ duration: 0.3, ease: SOFT_EASE }}
+              href="/Docu_Historia/HISTORIA CAFANET.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-6 inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg hover:shadow-2xl hover:shadow-blue-500/30"
+            >
+              <div className="flex-shrink-0 bg-white/15 backdrop-blur-sm border border-white/20 p-2 rounded-lg">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div className="text-left">
+                <span className="block text-[10px] font-bold uppercase tracking-wider text-white/70">Documento oficial</span>
+                <span className="block">Conoce la historia de Cafanet</span>
+              </div>
+              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </motion.a>
           </motion.div>
         </div>
 
