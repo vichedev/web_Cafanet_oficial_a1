@@ -37,7 +37,7 @@ const Nav = () => {
           aria-label="Inicio Cafanet"
         >
           <img
-            src="/img/cafanet.png"
+            src="/img/LOGO.png"
             alt="Cafanet Logo"
             className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
           />

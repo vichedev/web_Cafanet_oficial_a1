@@ -113,7 +113,7 @@ const Hero = () => {
             className="rounded-3xl overflow-hidden shadow-2xl bg-white/10 backdrop-blur-xl p-6 hover:bg-white/15 transition-all duration-500"
           >
             <img
-              src="/img/cafanet.png"
+              src="/img/LOGO.png"
               alt="Cafanet Logo"
               className="w-full h-auto object-contain scale-125"
             />

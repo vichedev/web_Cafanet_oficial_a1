@@ -51,7 +51,7 @@ const Nosotros = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
           >
             <span className="block">Más que un proveedor,</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-blue-300 text-shimmer">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-500 to-blue-300 text-shimmer leading-normal pb-2">
               somos tu aliado tecnológico
             </span>
           </motion.h2>
