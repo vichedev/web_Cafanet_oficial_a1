@@ -177,6 +177,18 @@ const Footer = () => {
                   Planes y Cobertura
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/consumo-internacional"
+                  className="text-gray-400 hover:text-white transition inline-flex items-center gap-2"
+                >
+                  Consumo Internacional
+                  <span className="relative flex h-2 w-2" aria-hidden="true">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                  </span>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

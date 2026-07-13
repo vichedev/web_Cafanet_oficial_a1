@@ -10,6 +10,7 @@ import ControlParental from './components/ControlParental'
 import Tips from './components/Tips'
 import PaginaDocumento from './components/PaginaDocumento'
 import Cobertura from './components/Cobertura'
+import ConsumoInternacional from './components/ConsumoInternacional'
 import ScrollToTop from './utils/ScrollToTop'
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/cobertura" element={<Cobertura />} />
           <Route path="/tips" element={<Tips />} />
           <Route path="/control-parental" element={<ControlParental />} />
+          <Route path="/consumo-internacional" element={<ConsumoInternacional />} />
           <Route
             path="/parametros-calidad"
             element={
