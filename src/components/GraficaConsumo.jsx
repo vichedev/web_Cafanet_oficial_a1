@@ -63,12 +63,20 @@ const GraficaConsumo = ({ serie, capacidadGbps, etiquetaMes }) => {
 
   return (
     <div className="relative">
-      <div className="overflow-x-auto">
-        <div className="min-w-[680px] relative">
+      {/* Pista de desplazamiento: solo visible en pantallas pequeñas donde la gráfica no cabe entera. */}
+      <p className="mb-2 flex items-center justify-center gap-1.5 text-xs text-gray-400 md:hidden">
+        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7l-4 5 4 5M16 7l4 5-4 5" />
+        </svg>
+        Desliza para ver toda la gráfica · toca un punto para ver el detalle
+      </p>
+      <div className="chart-scroll -mx-5 overflow-x-auto px-5 pb-3 md:mx-0 md:px-0">
+        <div className="relative min-w-[680px]">
           <svg
             ref={svgRef}
             viewBox={`0 0 ${ANCHO} ${ALTO}`}
-            className="w-full h-auto touch-none"
+            className="h-auto w-full"
+            style={{ touchAction: 'pan-x pan-y' }}
             role="img"
             aria-label={`Porcentaje diario de uso de la capacidad internacional durante ${etiquetaMes}. La tabla de datos con todos los valores está disponible debajo de la gráfica.`}
             onPointerMove={alMover}

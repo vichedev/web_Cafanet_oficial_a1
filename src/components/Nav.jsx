@@ -72,11 +72,11 @@ const Nav = () => {
 
       {/* Menú móvil desplegable con transición */}
       <div
-        className={`md:hidden overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        className={`md:hidden overflow-y-auto overscroll-contain transition-[max-height,opacity] duration-300 ease-in-out ${
+          isOpen ? 'max-h-[calc(100vh-5rem)] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="px-4 pb-4 pt-2 border-t border-gray-100">
+        <div className="px-4 pb-4 pt-2 border-t border-gray-100 bg-white/95 backdrop-blur-md">
           <div className="flex flex-col space-y-1">
             <NavLinks closeMenu={closeMenu} currentPath={location.pathname} mobile />
           </div>

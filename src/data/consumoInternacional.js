@@ -18,11 +18,11 @@
 export const MES_INICIO = '2026-01';
 
 /** Capacidad internacional contratada por defecto, en Gbps. */
-export const CAPACIDAD_CONTRATADA_GBPS = 10;
+export const CAPACIDAD_CONTRATADA_GBPS = 16.51;
 
 /** Cambios de capacidad contratada: { 'YYYY-MM': Gbps } — aplica desde ese mes en adelante. */
 export const capacidadPorMes = {
-  '2026-01': 10
+  '2026-01': 16.51
 };
 
 /** Mediciones reales por mes: { 'YYYY-MM': [%día1, %día2, ...] }. Tienen prioridad sobre lo generado. */
